@@ -29,7 +29,8 @@ Set the secret key in a initializer
 # config/application.rb
 # Some code here...
 
-HasSecureWhatever.config.secret_key = "H9dDCsP5hBRCGTuXc7R0CcsHZIX4vakSwCcvpHs1TQA=" # It's better if you get it from a ENV or from your encrypted credentials
+# It's better if you get it from a ENV or from your encrypted credentials
+HasSecureWhatever.config.secret_key = "H9dDCsP5hBRCGTuXc7R0CcsHZIX4vakSwCcvpHs1TQA="
 ```
 
 ## Usage
