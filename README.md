@@ -2,7 +2,7 @@
 
 Add encrypted attributes to your rails models and keep data safe in database, then get them back as normal text
 
-**WARNING:** THIS PLUGIN IS NOT MEANT TO BE A REPLACEMENT OF RAILS' `has_secure_password`, THIS PLUGIN MUST NOT BE USED TO AUTHENTICATE USERS, AND/OR SHOULD NOT BE USED TO SAVE USERS PASSWORDS.
+**WARNING:** THIS PLUGIN IS NOT A REPLACEMENT OF RAILS' `has_secure_password`, THIS PLUGIN MUST NOT BE USED TO AUTHENTICATE USERS, AND/OR SHOULD NOT BE USED TO SAVE USERS PASSWORDS.
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -38,7 +38,7 @@ HasSecureWhatever.config.secret_key = "H9dDCsP5hBRCGTuXc7R0CcsHZIX4vakSwCcvpHs1T
 Create a model or a migration to add an attribute which will save the encrypted text
 
 ```
-$ rails generate model message content_digest
+$ rails generate model message content_digest sender_id_digest
 ```
 
 In your model setup the secure attribute
@@ -47,6 +47,7 @@ In your model setup the secure attribute
 # app/models/message.rb
 class Message < ApplicationRecord
   has_secure :content
+  has_secure :sender_id
 end
 ```
 
@@ -56,6 +57,7 @@ If you don't want validations:
 # app/models/message.rb
 class Message < ApplicationRecord
   has_secure :content, validations: false
+  has_secure :sender_id
 end
 ```
 
@@ -65,6 +67,7 @@ If your encrypted attribute has a different column name:
 # app/models/message.rb
 class Message < ApplicationRecord
   has_secure :content, digest_name: :content_encrypted
+  has_secure :sender_id
 end
 ```
 
@@ -74,6 +77,7 @@ Now create and add data
 
 message = Message.new
 message.content = "This is a new message. Hello!"
+message.sender_id = "ID-A786252"
 message.save
 
 message.content_digest #=> "RM9Q93FBH+qFRAnR+1AofpMB--BgDpGocU7hv3p+1q--LonJLa5biV6rxFu3z/oJmg=="
