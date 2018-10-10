@@ -17,3 +17,6 @@ module Dummy
   end
 end
 
+HasSecureWhatever.configure do |config|
+  config.secret_key = "8BwOVyaASwUuqMhEWzD17aWV1pdKAvKBOoCi0p5S7zY=" # can be placed in a ENV or credentials
+end
