@@ -35,13 +35,13 @@ HasSecureWhatever.config.secret_key = "H9dDCsP5hBRCGTuXc7R0CcsHZIX4vakSwCcvpHs1T
 
 ## Usage
 
-Create a model or a migration to add an attribute which will save the encrypted text
+Create a model or a migration to add the attributes that will save encrypted text. Convention is name then as *attribute*\_digest
 
 ```
 $ rails generate model message content_digest sender_id_digest
 ```
 
-In your model setup the secure attribute
+In your model, setup the secure attribute
 
 ```ruby
 # app/models/message.rb
