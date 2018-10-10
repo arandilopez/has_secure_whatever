@@ -1,5 +1,7 @@
 # Has secure... whatever...
 
+[![Gem Version](https://badge.fury.io/rb/has_secure_whatever.svg)](https://badge.fury.io/rb/has_secure_whatever)
+
 Add encrypted attributes to your rails models and keep data safe in database, then get them back as normal text
 
 **WARNING:** THIS PLUGIN IS NOT A REPLACEMENT OF RAILS' `has_secure_password`, THIS PLUGIN MUST NOT BE USED TO AUTHENTICATE USERS, AND/OR SHOULD NOT BE USED TO SAVE USERS PASSWORDS.
