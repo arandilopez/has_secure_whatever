@@ -27,7 +27,7 @@ H9dDCsP5hBRCGTuXc7R0CcsHZIX4vakSwCcvpHs1TQA=
 
 Set the secret key in a initializer
 
-```
+```ruby
 # config/application.rb
 # Some code here...
 
