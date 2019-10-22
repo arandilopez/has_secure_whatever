@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    has_secure_whatever (0.1.0)
+    has_secure_whatever (0.2.0)
       rails (< 7)
 
 GEM
